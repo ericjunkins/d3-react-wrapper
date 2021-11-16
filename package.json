@@ -1,6 +1,6 @@
 {
   "name": "d3-react-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -12,11 +12,15 @@
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "d3": "^7.1.1",
+    "d3-collection": "^1.0.7",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "style-loader": "^3.3.1",
@@ -27,5 +31,9 @@
   },
   "peerDependencies": {
     "react": "16.13.1"
+  },
+  "repository": {
+    "url": "https://github.com/ericjunkins/d3-react-wrapper",
+    "type": "git"
   }
 }
