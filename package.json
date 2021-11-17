@@ -1,20 +1,20 @@
 {
   "name": "d3-react-wrapper",
-  "version": "1.0.1",
+  "version": "1.0.10",
   "description": "",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
   "scripts": {
     "start": "webpack-watch",
-    "build": "webpack",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
@@ -35,5 +35,10 @@
   "repository": {
     "url": "https://github.com/ericjunkins/d3-react-wrapper",
     "type": "git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
   }
 }

@@ -24,7 +24,7 @@ function useResize(timeout) {
     return { containerRef: ref, size };
 }
 
-const D3Container = React.forwardRef(({ id, viz, config = {}, data, containerStyle, resizeTimeout = 100}, vizRef) => {
+export const D3Container = React.forwardRef(({ id, viz, config = {}, data, containerStyle, resizeTimeout = 100}, vizRef) => {
     const { containerRef, size } = useResize(resizeTimeout);
     const firstRender = useRef(true);
     // Upon first mount, initialize visualization with initial configuration.
@@ -60,4 +60,3 @@ const D3Container = React.forwardRef(({ id, viz, config = {}, data, containerSty
         </div>
     )
 });
-export default D3Container;
